@@ -8,12 +8,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Video -->
-     <video id="video" controls height="360" width="640" hidden></video>
-     <div class="button-container">
+    <header>
+        <h1>Welcome to Picture-in-Picture App</h1>
+    </header>
+
+    <section class="instructions">
+        <h2>How to Use This App:</h2>
+        <ol>
+            <li>Click the <strong>PLAY</strong> button below to select tab, screen or window.</li>
+            <li>The video will start playing on this tab, you can control volume, pause it or open full screen </li>
+            <li>Use the <strong>START</strong> button to play it in Picture-in-Picture (PiP) mode—play it and enjoy!</li>
+            <li>To exit PiP mode, click the <strong>Exit PiP</strong> button or use your system controls.</li>
+        </ol>
+        <p><em>Note:</em> Ensure your browser supports Picture-in-Picture mode.</p>
+    </section>
+    <div id="error-message" class="hidden" aria-live="polite">
+        <p>An error occurred: <span id="error-details"></span></p>
+    </div>     
+    
+    <video id="video" controls height="360" width="640" hidden></video>
+    
+    <div class="button-container">
         <button id="button">START</button>
-     </div>
-    <!-- Script -->
+        <button id="resetButton">PLAY</button>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
